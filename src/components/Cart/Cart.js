@@ -12,10 +12,11 @@ export default function Cart(props) {
   const hasItems = cartCtx.items.length > 0;
 
   function cartItemRemoveHandler(id) {
-
+    cartCtx.removeItem(id);
   };
 
-  function cartItemAddHandler(tem) {
+  function cartItemAddHandler(item) {
+    cartCtx.addItem({...item, amount: 1});
     
   };
 
